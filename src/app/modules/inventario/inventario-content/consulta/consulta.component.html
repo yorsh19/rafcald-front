@@ -1,0 +1,109 @@
+<header>
+    <div class="header-container">
+        <h1>BIENVENIDO A NUESTRO SISTEMA</h1>
+        <p>dd/mm/yy</p>
+    </div>
+</header>
+<main>
+    <section class="material-section">
+        <div class="material-header">
+            <h2>Punto de Materiales</h2>
+            <p>&#9776; Materiales</p>
+        </div>
+        <form class="material-form">
+            <div class="form-group">
+                <label for="codigo">Código</label>
+                <input type="text" id="codigo" [(ngModel)]="material.codigo" name="codigo" placeholder="Ingrese el código del insumo">
+                <button type="button">&#128269;</button>
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" [(ngModel)]="material.nombre" name="nombre" placeholder="Ingrese el nombre del insumo">
+            </div>
+            <div class="form-group">
+                <label for="cantidad">Cantidad</label>
+                <input type="number" id="cantidad" [(ngModel)]="material.cantidad" name="cantidad">
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción</label>
+                <input type="text" id="descripcion" [(ngModel)]="material.descripcion" name="descripcion" placeholder="Breve descripción">
+            </div>
+            <div class="form-group">
+                <label for="costo">Costo</label>
+                <input type="number" id="costo" [(ngModel)]="material.costo" name="costo">
+            </div>
+            <div class="form-group">
+                <label for="unidad">Unidad medida</label>
+                <input type="text" id="unidad" [(ngModel)]="material.unidad" name="unidad">
+            </div>
+            <div class="form-group">
+                <label for="ubicacion">Ubicación</label>
+                <input type="text" id="ubicacion" [(ngModel)]="material.ubicacion" name="ubicacion">
+            </div>
+            <button type="submit" class="add-button" (click)="agregarMaterial()">Agregar</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nro</th>
+                    <th>Código</th>
+                    <th>Insumo</th>
+                    <th>Descripción</th>
+                    <th>Cant.</th>
+                    <th>U. Me.</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let material of materialList; let i = index">
+                    <td>{{ i + 1 }}</td>
+                    <td>{{ material.codigo }}</td>
+                    <td>{{ material.nombre }}</td>
+                    <td>{{ material.descripcion }}</td>
+                    <td>{{ material.cantidad }}</td>
+                    <td>{{ material.unidad }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="buttons">
+            <button class="register">&#128722; Registrar compra</button>
+            <button class="clear" (click)="vaciarListado()">&#128465; Vaciar listado</button>
+        </div>
+    </section>
+    <section class="provider-section">
+        <h2>Proveedor</h2>
+        <form class="provider-form">
+            <div class="form-group">
+                <label for="codigo-proveedor">Código</label>
+                <input type="text" id="codigo-proveedor" [(ngModel)]="proveedor.codigo" name="codigo-proveedor">
+            </div>
+            <div class="form-group">
+                <label for="nombre-proveedor">Nombre</label>
+                <input type="text" id="nombre-proveedor" [(ngModel)]="proveedor.nombre" name="nombre-proveedor">
+            </div>
+            <div class="form-group">
+                <label for="apellidos">Apellidos</label>
+                <input type="text" id="apellidos" [(ngModel)]="proveedor.apellidos" name="apellidos">
+            </div>
+            <div class="form-group">
+                <label for="dni">DNI</label>
+                <input type="text" id="dni" [(ngModel)]="proveedor.dni" name="dni">
+            </div>
+            <div class="form-group">
+                <label for="direccion">Dirección</label>
+                <input type="text" id="direccion" [(ngModel)]="proveedor.direccion" name="direccion">
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="text" id="telefono" [(ngModel)]="proveedor.telefono" name="telefono">
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" [(ngModel)]="proveedor.correo" name="correo">
+            </div>
+            <div class="buttons">
+                <button class="register" (click)="registrarProveedor()">Registrar</button>
+                <button class="clear" (click)="limpiarProveedor()">Limpiar datos</button>
+            </div>
+        </form>
+    </section>
+</main>

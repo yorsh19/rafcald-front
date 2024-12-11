@@ -1,0 +1,8 @@
+.home-wrapper {
+    margin: 0 0 0 22rem;
+    background-color: var(--color-4);
+    min-height: 100vh;
+    width: calc(100% - 22rem);
+    display: flex;
+    flex-direction: column;
+}

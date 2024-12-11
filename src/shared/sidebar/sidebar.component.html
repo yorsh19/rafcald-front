@@ -1,0 +1,37 @@
+<div class="side-bar">
+  <div class="centrarTitulo">
+    <img src="assets/img/Logo.png" width="200" />
+    <h1>RAFCALD</h1>
+    <div class="side-bar__separator line-1"></div>
+  </div>
+
+  <ul class="side-bar__list list-one">
+    <li [routerLink]="item.router" *ngFor="let item of menuItems">
+      <div
+        class="menu-item"
+        (click)="toggleSubmenu(item)"
+        class="list-wrapper-item"
+        class="desplazado"
+      >
+        <i [ngClass]="['icon-class', item.icon]"></i>
+        <span class="side-bar__list list-label">{{ item.name }}</span>
+        <i
+          *ngIf="item.submenu"
+          class="uil uil-angle-down"
+          [class.open]="item.open"
+        ></i>
+      </div>
+
+      <ul *ngIf="item.submenu && item.open" class="submenu">
+        <li *ngFor="let subItem of item.submenu">
+          <a [routerLink]="subItem.router">
+            <i [ngClass]="['icon-class', subItem.icon]"></i>
+            <span>{{ subItem.name }}</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="side-bar__separator line-2"></div>
+</div>

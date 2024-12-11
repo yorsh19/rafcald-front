@@ -1,0 +1,30 @@
+.Presentacion {
+    font-family: 'Times New Roman';
+    margin: 0 0 0 0rem;
+    background-color: var(--color-7);
+    min-height: 20vh;
+    font-size: xx-large;
+    color: white;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.Contenido {
+    font-family: 'Times New Roman';
+    margin: 0 0 0 0rem;
+    background-color: var(--color-4);
+    height: 530px;
+    width: 1100px;
+    font-size: 40px;
+    color: var(--color-7);
+    position: relative;
+    left: 90px;
+    top: 10px;
+}
+
+.PImagen {
+    position: relative;
+    left: 320px;
+}

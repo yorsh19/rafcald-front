@@ -1,0 +1,129 @@
+.side-bar {
+    font-family: 'Times New Roman';
+    width: 20rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: .5rem 1rem;
+    background-color: var(--color-6);
+}
+
+.centrarTitulo {
+    font-size: x-large;
+    color: white;
+    text-align: center;
+}
+
+.desplazado {
+    font-size: xx-large;
+    color: white;
+    position: relative;
+    left: 70px;
+}
+
+.side-bar__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    opacity: .8;
+}
+
+.side-bar__list .list-label {
+    font-size: 90%;
+    font-weight: 500;
+}
+
+.side-bar__list .list-wrapper-item {
+    font-size: var(--font-size-1);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.side-bar__list .list-wrapper-item .uil {
+    font-size: var(--font-size-3);
+    padding-right: .5rem;
+}
+
+.side-bar__separator {
+    margin: 1rem 0;
+}
+
+.side-bar__separator.line-1 {
+    border-bottom: solid 4px var(--color-4);
+}
+
+.side-bar__separator.line-2 {
+    border-bottom: solid 2px var(--color-4);
+}
+
+.side-bar__list.list-three .list-wrapper-item {
+    padding: .25rem 0;
+}
+
+.side-bar__list li {
+    cursor: pointer;
+}
+
+.side-bar li {
+    position: relative;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.side-bar li .menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.side-bar li:hover {
+    background-color: #2d4a73;
+}
+
+.side-bar li a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.side-bar li a:hover {
+    color: #cdd9f7;
+}
+
+.submenu {
+    list-style: none;
+    padding-left: 20px;
+    background-color: #243b5d;
+}
+
+.submenu li {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.submenu li:hover {
+    background-color: #2d4a73;
+}
+
+.submenu li a {
+    color: white;
+    font-size: 20px;
+    position: relative;
+    left: 55px;
+}
+
+.uil-angle-down {
+    transition: transform 0.3s ease;
+    position: fixed;
+    left: 60px;
+}
+
+.uil-angle-down.open {
+    transform: rotate(180deg);
+}

@@ -1,0 +1,61 @@
+<div class="punto-produccion-container">
+  <h2>Punto de Producción</h2>
+  <form>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="nro">Nro:</label>
+        <input type="text" id="nro" name="nro" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="nro-pedido">Nro de Pedido:</label>
+        <input
+          type="text"
+          id="nro-pedido"
+          name="nro-pedido"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="cantidad">Cantidad:</label>
+        <input
+          type="number"
+          id="cantidad"
+          name="cantidad"
+          class="form-control"
+        />
+      </div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Nro</th>
+          <th>Nº Pedido</th>
+          <th>Producto</th>
+          <th>Cant.</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="dynamic-row">
+          <td colspan="5" style="text-align: center; color: #999">
+            Aquí se mostrarán los datos agregados.
+          </td>
+        </tr>
+        <tr class="dynamic-row">
+          <td colspan="5" style="text-align: center; color: #999">
+            Aquí se mostrarán los datos agregados.
+          </td>
+        </tr>
+        <tr class="dynamic-row">
+          <td colspan="5" style="text-align: center; color: #999">
+            Aquí se mostrarán los datos agregados.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="form-actions">
+      <button type="button" class="btn btn-primary">Generar orden</button>
+      <button type="button" class="btn btn-danger">Vaciar listado</button>
+    </div>
+  </form>
+</div>
